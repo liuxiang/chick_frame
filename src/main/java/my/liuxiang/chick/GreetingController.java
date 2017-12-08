@@ -13,6 +13,17 @@ public class GreetingController {
     private final AtomicLong counter = new AtomicLong();
 
     /**
+     * http://localhost:8080/
+     *
+     * @param name
+     * @return
+     */
+    @RequestMapping("/")
+    public String home(@RequestParam(value = "name", defaultValue = "World") String name) {
+        return greeting(name);
+    }
+
+    /**
      * http://localhost:8080/greeting
      *
      * @param name
