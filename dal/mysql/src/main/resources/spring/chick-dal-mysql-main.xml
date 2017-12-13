@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+						http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+						http://www.springframework.org/schema/context
+       					http://www.springframework.org/schema/context/spring-context-3.2.xsd"
+       default-autowire="byName">
+
+    <!-- 引入基础配置 -->
+    <import resource="chick-dal-base.xml"/>
+
+    <!-- ================================== 引入配置文件 ====================================== -->
+
+    <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> START DataSource定义 配置 >>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+    <!-- ================================== proxyFilters ====================================== -->
+
+    <!-- ================================== 数据源bean ====================================== -->
+    <bean id="mainDataSource" class="com.alibaba.druid.pool.DruidDataSource"
+          init-method="init" destroy-method="close">
+        <!-- 基本属性 url、user、password -->
+        <property name="driverClassName" value="${jdbc.cash.database.driver}"/>
+        <property name="url" value="${jdbc.cash.database.url}&amp;zeroDateTimeBehavior=convertToNull"/>
+        <property name="username" value="${jdbc.cash.database.username}"/>
+        <property name="password" value="${jdbc.cash.database.password}"/>
+        <property name="defaultAutoCommit" value="false"/>
+
+        <!-- 配置初始化大小、最小、最大 -->
+        <property name="initialSize" value="${jdbc.cash.database.initialSize}"/>
+        <property name="minIdle" value="1"/>
+        <property name="maxActive" value="${jdbc.cash.database.maxActive}"/>
+
+        <!-- 配置获取连接等待超时的时间 -->
+        <property name="maxWait" value="60000"/>
+
+        <!-- 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒 -->
+        <property name="timeBetweenEvictionRunsMillis" value="60000"/>
+
+        <!-- 配置一个连接在池中最小生存的时间，单位是毫秒 -->
+        <property name="minEvictableIdleTimeMillis" value="300000"/>
+
+        <!-- 配置连接超时 5s -->
+        <property name="loginTimeout" value="5"/>
+        <!-- 配置查询超时 300s -->
+        <property name="queryTimeout" value="300"/>
+
+        <!--<property name="validationQuery" value="SELECT 'x'" /> -->
+        <property name="testWhileIdle" value="true"/>
+        <property name="testOnBorrow" value="false"/>
+        <property name="testOnReturn" value="false"/>
+
+        <!-- 打开PSCache，并且指定每个连接上PSCache的大小 -->
+        <property name="poolPreparedStatements" value="true"/>
+        <property name="maxPoolPreparedStatementPerConnectionSize"
+                  value="20"/>
+
+        <!-- 配置监控统计拦截的filters -->
+        <property name="filters" value="stat,slf4j"/>
+
+    </bean>
+    <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< END DataSource定义 配置 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+
+
+    <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> START DAO定义 配置 >>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+    <bean id="mainSqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="mapperLocations" value="classpath*:mybatis/mappers/*.xml"/>
+        <property name="typeAliasesPackage" value="my.liuxiang.mysql.model"/>
+        <property name="dataSource" ref="mainDataSource"/>
+        <property name="plugins">
+            <array>
+                <bean class="com.github.pagehelper.PageInterceptor">
+                    <property name="properties">
+                        <value>
+                            helperDialect=mysql
+                            reasonable=true
+                            supportMethodsArguments=true
+                            params=count=countSql
+                            autoRuntimeDialect=true
+                        </value>
+                    </property>
+                </bean>
+            </array>
+        </property>
+    </bean>
+
+    <bean name="mainMapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="my.liuxiang.mysql.mapper"/>
+        <property name="sqlSessionFactoryBeanName" value="mainSqlSessionFactory"/>
+    </bean>
+    <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< END DAO定义 配置 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+
+
+    <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> START 事务 配置 >>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+    <!--forseti的Ibatis事务管理器-->
+    <bean id="mainTransactionManager"
+          class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="mainDataSource"/>
+    </bean>
+
+
+</beans>
