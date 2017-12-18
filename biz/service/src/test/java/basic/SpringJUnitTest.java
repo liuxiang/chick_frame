@@ -13,7 +13,6 @@ import javax.sql.DataSource;
 /**
  * SpringJUnitTest
  *
- * @author jianhao.dai@fraudmetrix.cn 16/4/26 13:45
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {"classpath:app.xml"})

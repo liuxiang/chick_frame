@@ -2,6 +2,8 @@
 Create Database If Not Exists chick Character Set UTF8;
 -- drop database chick;
 
+use chick;
+
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------

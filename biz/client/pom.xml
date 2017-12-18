@@ -11,5 +11,9 @@
 
     <artifactId>chick-client</artifactId>
 
+    <!-- 对外提供的client,注意依赖管理(尽量少的依赖) -->
+    <dependencies>
+        
+    </dependencies>
 
 </project>

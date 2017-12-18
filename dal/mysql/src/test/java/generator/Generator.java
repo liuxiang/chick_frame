@@ -24,6 +24,11 @@
 
 package generator;
 
+//import org.mybatis.generator.api.MyBatisGenerator;
+//import org.mybatis.generator.config.Configuration;
+//import org.mybatis.generator.config.xml.ConfigurationParser;
+//import org.mybatis.generator.internal.DefaultShellCallback;
+
 import org.mybatis.generator.api.MyBatisGenerator;
 import org.mybatis.generator.config.Configuration;
 import org.mybatis.generator.config.xml.ConfigurationParser;
@@ -49,3 +54,12 @@ public class Generator {
         myBatisGenerator.generate(null);
     }
 }
+
+/**
+ * <dependency>
+ * <groupId>mysql</groupId>
+ * <artifactId>mysql-connector-java</artifactId>
+ * <!--<version>8.0.8-dmr</version>-->
+ * <version>5.1.45</version> (建议版本号)
+ * </dependency>
+ */

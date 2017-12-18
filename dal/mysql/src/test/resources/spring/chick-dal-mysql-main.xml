@@ -20,16 +20,16 @@
     <bean id="mainDataSource" class="com.alibaba.druid.pool.DruidDataSource"
           init-method="init" destroy-method="close">
         <!-- 基本属性 url、user、password -->
-        <property name="driverClassName" value="${jdbc.cash.database.driver}"/>
-        <property name="url" value="${jdbc.cash.database.url}&amp;zeroDateTimeBehavior=convertToNull"/>
-        <property name="username" value="${jdbc.cash.database.username}"/>
-        <property name="password" value="${jdbc.cash.database.password}"/>
+        <property name="driverClassName" value="${jdbc.database.driver}"/>
+        <property name="url" value="${jdbc.database.url}&amp;zeroDateTimeBehavior=convertToNull"/>
+        <property name="username" value="${jdbc.database.username}"/>
+        <property name="password" value="${jdbc.database.password}"/>
         <property name="defaultAutoCommit" value="false"/>
 
         <!-- 配置初始化大小、最小、最大 -->
-        <property name="initialSize" value="${jdbc.cash.database.initialSize}"/>
+        <property name="initialSize" value="${jdbc.database.initialSize}"/>
         <property name="minIdle" value="1"/>
-        <property name="maxActive" value="${jdbc.cash.database.maxActive}"/>
+        <property name="maxActive" value="${jdbc.database.maxActive}"/>
 
         <!-- 配置获取连接等待超时的时间 -->
         <property name="maxWait" value="60000"/>
