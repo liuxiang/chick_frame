@@ -58,7 +58,6 @@
             <artifactId>spring-boot-starter-jta-atomikos</artifactId>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/javax.ws.rs/javax.ws.rs-api -->
         <dependency>
             <groupId>javax.ws.rs</groupId>
             <artifactId>javax.ws.rs-api</artifactId>
