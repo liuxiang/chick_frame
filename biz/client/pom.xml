@@ -8,12 +8,20 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
+    <packaging>jar</packaging>
 
     <artifactId>chick-client</artifactId>
 
     <!-- 对外提供的client,注意依赖管理(尽量少的依赖) -->
     <dependencies>
-        
+        <!-- 工程(common)依赖 -->
+        <dependency>
+            <groupId>my.liuxiang</groupId>
+            <artifactId>chick-common</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <!-- 模块依赖 -->
     </dependencies>
 
 </project>

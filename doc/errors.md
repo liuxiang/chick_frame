@@ -71,3 +71,14 @@ http://blog.csdn.net/u012527870/article/details/71633915
 原因:较新版的Spring Boot取消了@SpringApplicationConfiguration这个注解，用@SpringBootTest就可以了
 `Spring Boot @SpringApplicationConfiguration 不能导入的问题`
 http://blog.csdn.net/office5845/article/details/77749350
+
+# RestMapperController(Jersey) 成功调用,但返回404
+```$xslt
+{
+    "timestamp": 1513661775619,
+    "status": 404,
+    "error": "Not Found",
+    "message": "Not Found",
+    "path": "/rest/rs/mapper1"
+}
+```

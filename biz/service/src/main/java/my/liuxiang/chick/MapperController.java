@@ -7,12 +7,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import java.util.List;
 
 @SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
 @RestController
 public class MapperController {
+
 
     @Autowired
     CountryMapper countryMapper;
@@ -22,8 +24,7 @@ public class MapperController {
      *
      * @return
      */
-    @RequestMapping("/mapper")
-    @Produces({"application/json; charset=UTF-8"})// 未生效
+    @RequestMapping(value = "/mapper",produces = "application/json; charset=UTF-8")
     public String mapper() {
         List<Country> countryList = countryMapper.selectAll();
         System.out.println(countryList.size());
