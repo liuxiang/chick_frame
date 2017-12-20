@@ -1,4 +1,4 @@
-package my.rest;
+package my.liuxiang.chick.rest;
 
 import com.alibaba.fastjson.JSON;
 import com.sun.tools.internal.ws.wsdl.document.soap.SOAPUse;

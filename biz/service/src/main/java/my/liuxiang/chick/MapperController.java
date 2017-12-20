@@ -1,4 +1,4 @@
-package my;
+package my.liuxiang.chick;
 
 import com.alibaba.fastjson.JSON;
 import my.liuxiang.mysql.mapper.CountryMapper;

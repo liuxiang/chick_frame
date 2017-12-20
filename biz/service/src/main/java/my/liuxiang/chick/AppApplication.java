@@ -1,4 +1,4 @@
-package my;
+package my.liuxiang.chick;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

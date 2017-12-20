@@ -1,0 +1,414 @@
+{
+  "info": {
+    "name": "chick",
+    "_postman_id": "127c0026-8def-b717-f9bc-0cfcef94a7a0",
+    "description": "",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "actuator监控",
+      "description": "",
+      "item": [
+        {
+          "name": "http://localhost:8080/trace",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "http://localhost:8080/trace",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "trace"
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:8080/health",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "http://localhost:8080/health",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "health"
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:8080/beans",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "http://localhost:8080/beans",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "beans"
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:8080/autoconfig",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "http://localhost:8080/autoconfig",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "autoconfig"
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:8080/configprops",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "http://localhost:8080/autoconfig",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "autoconfig"
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:8080/dump",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "http://localhost:8080/dump",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "dump"
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:8080/env",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "http://localhost:8080/env",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "env"
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:8080/info",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "http://localhost:8080/info",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "info"
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:8080/metrics",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "http://localhost:8080/metrics",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "metrics"
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:8080/mappings",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "http://localhost:8080/mappings",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "mappings"
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:8080/shutdown",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "http://localhost:8080/shutdown",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "shutdown"
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "rest",
+      "description": "",
+      "item": [
+        {
+          "name": "rest http://localhost:8080/rest/rs/mapper",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "http://localhost:8080/rest/rs/mapper1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "rest",
+                "rs",
+                "mapper1"
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "thirdApp",
+      "description": "",
+      "item": [
+        {
+          "name": "http://localhost:8011/queryContryJson",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "http://localhost:8011/queryContryJson",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8011",
+              "path": [
+                "queryContryJson"
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:8011/queryContry",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "http://localhost:8011/queryContry",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8011",
+              "path": [
+                "queryContry"
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:8011/queryContry2",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "http://localhost:8011/queryContry2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8011",
+              "path": [
+                "queryContry2"
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "demo",
+      "description": "",
+      "item": [
+        {
+          "name": "http://localhost:8080/mapper",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "http://localhost:8080/mapper",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "mapper"
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "name": "http://localhost:8080/mapper2",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "http://localhost:8080/mapper2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "mapper2"
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "http://localhost:8080",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {},
+        "url": {
+          "raw": "http://localhost:8080/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            ""
+          ]
+        },
+        "description": ""
+      },
+      "response": []
+    }
+  ]
+}
