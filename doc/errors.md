@@ -82,3 +82,11 @@ http://blog.csdn.net/office5845/article/details/77749350
     "path": "/rest/rs/mapper1"
 }
 ```
+原因:未结
+
+# Error creating bean with name 'persistenceExceptionTranslationPostProcessor'
+```$xslt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'persistenceExceptionTranslationPostProcessor' defined in class path resource [org/springframework/boot/autoconfigure/dao/PersistenceExceptionTranslationAutoConfiguration.class]: Initialization of bean failed; nested exception is java.lang.IllegalStateException: No persistence exception translators found in bean factory. Cannot perform exception translation.
+```
+原因:`dubbo.version`从`2.5.3`升级到`2.5.8`问题解决
+

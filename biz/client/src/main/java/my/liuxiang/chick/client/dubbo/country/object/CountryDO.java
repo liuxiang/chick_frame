@@ -1,11 +1,11 @@
-package my.liuxiang.mysql.model;
+package my.liuxiang.chick.client.dubbo.country.object;
 
-import javax.persistence.*;
 import java.io.Serializable;
 
-public class Country implements Serializable {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class CountryDO implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
     private Integer id;
 
     private String countryname;

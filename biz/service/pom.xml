@@ -11,6 +11,10 @@
     <packaging>war</packaging>
     <artifactId>chick-service</artifactId>
 
+    <properties>
+        <dubbo.version>2.5.8</dubbo.version>
+    </properties>
+
     <dependencies>
 
         <!-- 工程(common)依赖 -->
@@ -23,6 +27,12 @@
         <dependency>
             <groupId>my.liuxiang</groupId>
             <artifactId>chick-mysql</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>my.liuxiang</groupId>
+            <artifactId>chick-client</artifactId>
             <version>${project.version}</version>
         </dependency>
 
@@ -63,6 +73,34 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jersey</artifactId>
+        </dependency>
+
+        <!-- RPC -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>dubbo</artifactId>
+            <version>${dubbo.version}</version>
+        </dependency>
+
+
+        <!--============ SpringTest + junit ============-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+            <version>${spring-version}</version>
+            <!--<scope>test</scope>-->
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
         </dependency>
 
     </dependencies>

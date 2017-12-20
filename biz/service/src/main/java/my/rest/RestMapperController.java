@@ -1,4 +1,4 @@
-package my.liuxiang.chick.rest;
+package my.rest;
 
 import com.alibaba.fastjson.JSON;
 import com.sun.tools.internal.ws.wsdl.document.soap.SOAPUse;
@@ -30,7 +30,7 @@ public class RestMapperController {
     protected HttpServletResponse autoResponse;
 
     /**
-     * http://localhost:8080/rest/rs/mapper
+     * http://localhost:8080/rest/rs/mapper1
      *
      * @return
      */

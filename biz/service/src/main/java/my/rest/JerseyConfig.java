@@ -1,4 +1,4 @@
-package my.liuxiang.chick.rest;
+package my.rest;
 
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.server.spring.scope.RequestContextFilter;
