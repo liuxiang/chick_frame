@@ -42,6 +42,8 @@ public class DubboController {
      */
     @RequestMapping("/queryContry2")
     public List<CountryDO> queryContry2() {
-        return countryService.queryConnrty(new CountryDO());
+        CountryDO countryDO = new CountryDO();
+        countryDO.setCountryname("中国");
+        return countryService.queryConnrty(countryDO);
     }
 }
