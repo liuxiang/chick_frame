@@ -5,7 +5,7 @@
 
     <parent>
         <artifactId>chick-client-deploy</artifactId>
-        <groupId>my.liuxiang</groupId>
+        <groupId>me.liuxiang</groupId>
         <relativePath>pom-deploy.xml</relativePath>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
@@ -19,7 +19,7 @@
     <dependencies>
         <!-- 工程(common)依赖 -->
         <dependency>
-            <groupId>my.liuxiang</groupId>
+            <groupId>me.liuxiang</groupId>
             <artifactId>chick-common</artifactId>
             <version>${project.version}</version>
         </dependency>

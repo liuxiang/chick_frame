@@ -65,7 +65,7 @@
     <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> START DAO定义 配置 >>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
     <bean id="mainSqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="mapperLocations" value="classpath*:mybatis/mappers/*.xml"/>
-        <property name="typeAliasesPackage" value="my.liuxiang.mysql.model"/>
+        <property name="typeAliasesPackage" value="me.liuxiang.mysql.model"/>
         <property name="dataSource" ref="mainDataSource"/>
         <property name="plugins">
             <array>
@@ -85,7 +85,7 @@
     </bean>
 
     <bean name="mainMapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="my.liuxiang.mysql.mapper"/>
+        <property name="basePackage" value="me.liuxiang.mysql.mapper"/>
         <property name="sqlSessionFactoryBeanName" value="mainSqlSessionFactory"/>
     </bean>
     <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< END DAO定义 配置 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->

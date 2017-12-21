@@ -59,9 +59,9 @@
                     password="liuxiang">
     </jdbcConnection>
 
-    <javaModelGenerator targetPackage="my.liuxiang.dal.mysql.model" targetProject="dal/mysql/src/test/java"/><!-- 相对路径从当前工程开始 -->
-    <sqlMapGenerator targetPackage="my.liuxiang.dal.mysql.mappers" targetProject="dal/mysql/src/test/java"/>
-    <javaClientGenerator targetPackage="my.liuxiang.dal.mysql.mapper" targetProject="dal/mysql/src/test/java" type="XMLMAPPER" />
+    <javaModelGenerator targetPackage="me.liuxiang.dal.mysql.model" targetProject="dal/mysql/src/test/java"/><!-- 相对路径从当前工程开始 -->
+    <sqlMapGenerator targetPackage="me.liuxiang.dal.mysql.mappers" targetProject="dal/mysql/src/test/java"/>
+    <javaClientGenerator targetPackage="me.liuxiang.dal.mysql.mapper" targetProject="dal/mysql/src/test/java" type="XMLMAPPER" />
 
     <table tableName="%" >
       <generatedKey column="id" sqlStatement="Mysql" identity="true"/>

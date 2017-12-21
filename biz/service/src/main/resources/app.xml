@@ -9,7 +9,7 @@
 
     <context:property-placeholder location="classpath:application.properties" ignore-unresolvable="true"/>
 
-    <!--<context:component-scan base-package="my.liuxiang"/>-->
+    <!--<context:component-scan base-package="me.liuxiang"/>-->
 
     <import resource="classpath:spring/*.xml"/>
 

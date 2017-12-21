@@ -1,7 +1,7 @@
 package mapper;
 
 import basic.BaseSpringBootTest;
-import my.liuxiang.mysql.mapper.CountryMapper;
+import me.liuxiang.mysql.mapper.CountryMapper;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
