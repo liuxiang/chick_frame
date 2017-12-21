@@ -42,8 +42,6 @@ public class DubboController {
      */
     @RequestMapping("/queryContry2")
     public List<CountryDO> queryContry2() {
-        return countryService.queryConnrty(new CountryDO(){{
-
-        }});
+        return countryService.queryConnrty(new CountryDO());
     }
 }
