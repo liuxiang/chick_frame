@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
+@com.alibaba.dubbo.config.annotation.Service // 注解方式服务提供:@Configuration
 public class CountryServiceImpl implements CountryService {
 
     @Autowired

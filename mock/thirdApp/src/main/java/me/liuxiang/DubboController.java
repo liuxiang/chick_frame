@@ -1,5 +1,6 @@
 package me.liuxiang;
 
+import com.alibaba.dubbo.config.annotation.Reference;
 import me.liuxiang.chick.client.dubbo.country.CountryService;
 import me.liuxiang.chick.client.dubbo.country.object.CountryDO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,8 +13,9 @@ import java.util.List;
 @RestController
 public class DubboController {
 
-    @Autowired
-    CountryService countryService;
+    // @Autowired// xml服务引用:﻿<dubbo:reference
+    @Reference(url = "dubbo://127.0.0.1:12345")// 注解方式服务引用:@Configuration
+            CountryService countryService;
 
     /**
      * http://localhost:8011/queryContryJson
