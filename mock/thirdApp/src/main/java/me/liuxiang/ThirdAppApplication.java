@@ -1,6 +1,5 @@
 package me.liuxiang;
 
-import me.liuxiang.config.ConsumerConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -23,7 +22,7 @@ public class ThirdAppApplication {
         // 创建服务消费方 Annotation 配置上下文
         AnnotationConfigApplicationContext consumerContext = new AnnotationConfigApplicationContext();
         // 注册服务消费方配置 Bean
-        consumerContext.register(ConsumerConfiguration.class);
+        consumerContext.register(DubboConsumerConfiguration.class);
         // 启动服务消费方上下文
         consumerContext.refresh();
         // 返回服务消费方 Annotation 配置上下文

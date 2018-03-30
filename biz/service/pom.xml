@@ -14,31 +14,16 @@
     <properties>
         <!-- war启动类 -->
         <start-class>me.liuxiang.chick.AppApplication</start-class>
-        <dubbo.version>2.5.8</dubbo.version>
+
+        <!-- 三方库 -->
+        <dubbo.version>2.6.0</dubbo.version>
+        <druid.version>1.1.9</druid.version>
+
     </properties>
 
     <dependencies>
 
-        <!-- 工程(common)依赖 -->
-        <dependency>
-            <groupId>me.liuxiang</groupId>
-            <artifactId>chick-common</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>me.liuxiang</groupId>
-            <artifactId>chick-mysql</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>me.liuxiang</groupId>
-            <artifactId>chick-client</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-
-        <!-- 模块依赖 -->
+        <!-- spring 模块依赖 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
@@ -90,12 +75,37 @@
             <artifactId>spring-boot-starter-jersey</artifactId>
         </dependency>
 
-        <!-- RPC -->
+        <!-- 二方库 工程(common)依赖 -->
+        <dependency>
+            <groupId>me.liuxiang</groupId>
+            <artifactId>chick-common</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>me.liuxiang</groupId>
+            <artifactId>chick-mysql</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>me.liuxiang</groupId>
+            <artifactId>chick-client</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <!-- 三方依赖 -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>${druid.version}</version>
+        </dependency>
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>dubbo</artifactId>
             <version>${dubbo.version}</version>
         </dependency>
+
 
 
         <!--============ SpringTest + junit ============-->
